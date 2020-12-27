@@ -2,6 +2,9 @@
 #define IFSRENDERDIALOG_H
 
 #include <QDialog>
+#include <QTimerEvent>
+
+#include "transformfunction.h"
 
 namespace Ui {
 class IFSRenderDialog;
@@ -15,8 +18,18 @@ public:
     explicit IFSRenderDialog(QWidget *parent = nullptr);
     ~IFSRenderDialog();
 
+    void addFunction(TransformFunction f);
+
+protected:
+    void timerEvent(QTimerEvent *event) override;
+
+private slots:
+    void on_startButton_released();
+
 private:
     Ui::IFSRenderDialog *ui;
+    bool started = false;
+    int timer;
 };
 
 #endif // IFSRENDERDIALOG_H

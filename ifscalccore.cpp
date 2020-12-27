@@ -22,7 +22,7 @@ IFSCalcCore::~IFSCalcCore()
 void IFSCalcCore::_initRandom()
 {
     this->rd = new std::random_device;
-    this->gen = new std::mt19937(*this->rd);
+    this->gen = new std::mt19937((*this->rd)());
     this->dist = new std::uniform_real_distribution<>(0.0, 1.0);
 }
 

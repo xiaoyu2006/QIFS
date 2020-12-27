@@ -62,6 +62,10 @@ void IFSInput::on_loadButton_released()
 
 void IFSInput::on_renderButton_released()
 {
+    if (displays.empty()) return;
     IFSRenderDialog* renderDlg = new IFSRenderDialog(this);
+    for(auto f : displays) {
+        renderDlg->addFunction(f->getFunction());
+    }
     renderDlg->open();
 }
