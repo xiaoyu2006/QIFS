@@ -46,6 +46,7 @@ void IFSInput::on_clearAllButton_released()
 void IFSInput::on_saveButton_released()
 {
     QString saveTo = QFileDialog::getSaveFileName(this, "Save to...");
+    if (saveTo=="") return;
     std::ofstream file;
     file.open(saveTo.toStdString());
     for (TransformFunctionDisplay* disp : displays) {
@@ -57,7 +58,17 @@ void IFSInput::on_saveButton_released()
 
 void IFSInput::on_loadButton_released()
 {
-    // TODO: impl
+    QString readFrom = QFileDialog::getOpenFileName(this, "Open...");
+    if(readFrom=="") return;
+    std::ifstream file;
+    file.open(readFrom.toStdString());
+    this->clearAllFunction();
+    double a, b, c, d, e, f, w;
+    while(file >> a >> b >> c >> d >> e >> f >> w) {
+        TransformFunction func;
+        func.a = a; func.b = b; func.c = c; func.d = f; func.e = e; func.f = f; func.weight = w;
+        addFunction(func);
+    }
 }
 
 void IFSInput::on_renderButton_released()
@@ -67,5 +78,5 @@ void IFSInput::on_renderButton_released()
     for(auto f : displays) {
         renderDlg->addFunction(f->getFunction());
     }
-    renderDlg->open();
+    renderDlg->exec();
 }

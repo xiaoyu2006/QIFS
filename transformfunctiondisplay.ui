@@ -17,7 +17,7 @@
    <item>
     <widget class="QLabel" name="_label1">
      <property name="text">
-      <string>F(x,y)=(</string>
+      <string>f(x,y)=(</string>
      </property>
     </widget>
    </item>

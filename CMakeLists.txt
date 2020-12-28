@@ -26,7 +26,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 #    endif()
 #endif()
 
-find_package(Qt5 COMPONENTS Widgets REQUIRED)
+find_package(Qt5 COMPONENTS Widgets Gui REQUIRED)
 
 set(SOURCES
   ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
@@ -59,4 +59,4 @@ else()
   )
 endif()
 
-target_link_libraries(QIFS PRIVATE Qt5::Widgets)
+target_link_libraries(QIFS PRIVATE Qt5::Widgets Qt5::Gui)

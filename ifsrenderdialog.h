@@ -26,7 +26,11 @@ protected:
 private slots:
     void on_startButton_released();
 
+    void on_updTimer_valueChanged(int arg);
+
 private:
+    void toggleExecutingMode(int t);
+
     Ui::IFSRenderDialog *ui;
     bool started = false;
     int timer;
