@@ -29,6 +29,9 @@
      <property name="buttonSymbols">
       <enum>QAbstractSpinBox::NoButtons</enum>
      </property>
+     <property name="decimals">
+      <number>4</number>
+     </property>
     </widget>
    </item>
    <item>
@@ -42,6 +45,9 @@
     <widget class="QDoubleSpinBox" name="doubleSpinBox_2">
      <property name="buttonSymbols">
       <enum>QAbstractSpinBox::NoButtons</enum>
+     </property>
+     <property name="decimals">
+      <number>4</number>
      </property>
     </widget>
    </item>
@@ -57,6 +63,9 @@
      <property name="buttonSymbols">
       <enum>QAbstractSpinBox::NoButtons</enum>
      </property>
+     <property name="decimals">
+      <number>4</number>
+     </property>
     </widget>
    </item>
    <item>
@@ -70,6 +79,9 @@
     <widget class="QDoubleSpinBox" name="doubleSpinBox_4">
      <property name="buttonSymbols">
       <enum>QAbstractSpinBox::NoButtons</enum>
+     </property>
+     <property name="decimals">
+      <number>4</number>
      </property>
     </widget>
    </item>
@@ -85,6 +97,9 @@
      <property name="buttonSymbols">
       <enum>QAbstractSpinBox::NoButtons</enum>
      </property>
+     <property name="decimals">
+      <number>4</number>
+     </property>
     </widget>
    </item>
    <item>
@@ -99,6 +114,9 @@
      <property name="buttonSymbols">
       <enum>QAbstractSpinBox::NoButtons</enum>
      </property>
+     <property name="decimals">
+      <number>4</number>
+     </property>
     </widget>
    </item>
    <item>
@@ -112,6 +130,9 @@
     <widget class="QDoubleSpinBox" name="doubleSpinBox_widget">
      <property name="buttonSymbols">
       <enum>QAbstractSpinBox::NoButtons</enum>
+     </property>
+     <property name="decimals">
+      <number>4</number>
      </property>
      <property name="value">
       <double>1.000000000000000</double>
