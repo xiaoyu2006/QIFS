@@ -66,7 +66,7 @@ void IFSInput::on_loadButton_released()
     double a, b, c, d, e, f, w;
     while(file >> a >> b >> c >> d >> e >> f >> w) {
         TransformFunction func;
-        func.a = a; func.b = b; func.c = c; func.d = f; func.e = e; func.f = f; func.weight = w;
+        func.a = a; func.b = b; func.c = c; func.d = d; func.e = e; func.f = f; func.weight = w;
         addFunction(func);
     }
 }

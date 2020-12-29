@@ -15,7 +15,7 @@ IFSRenderDialog::~IFSRenderDialog()
 
 void IFSRenderDialog::timerEvent(QTimerEvent *event) {
     if (event->timerId() == this->timer) {
-        ui->renderResult->repaint();
+        ui->renderResult->step();
     }
 }
 
