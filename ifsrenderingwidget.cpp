@@ -28,6 +28,7 @@ void IFSRenderingWidget::step()
     QPainter painter;
     painter.begin(buffer);
     Point toDraw = calculator.step();
+    painter.setPen(QPen(Qt::black, 2));
     double w = 600, h = 300;
     double x = (toDraw.x + 2) * w * 0.2;
     double y = (toDraw.y + 2) * h * 0.2;
